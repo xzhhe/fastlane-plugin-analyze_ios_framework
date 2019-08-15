@@ -19,11 +19,11 @@ module Fastlane
 
         frameworks = Fastlane::Helper::AnalyzeIosFrameworkHelper.frameworks(pods, build, app)
         Fastlane::Actions.lane_context[Fastlane::Actions::SharedValues::ANALYZE_IOS_FRAMEWORK_PATHS] = frameworks
-        pp Fastlane::Actions.lane_context[Fastlane::Actions::SharedValues::ANALYZE_IOS_FRAMEWORK_PATHS]
+        # pp Fastlane::Actions.lane_context[Fastlane::Actions::SharedValues::ANALYZE_IOS_FRAMEWORK_PATHS]
 
         frameworks_hash = Fastlane::Helper::AnalyzeIosFrameworkHelper.generate(frameworks)
         Fastlane::Actions.lane_context[Fastlane::Actions::SharedValues::ANALYZE_IOS_FRAMEWORK_HASH] = frameworks_hash
-        pp Fastlane::Actions.lane_context[Fastlane::Actions::SharedValues::ANALYZE_IOS_FRAMEWORK_HASH]
+        # pp Fastlane::Actions.lane_context[Fastlane::Actions::SharedValues::ANALYZE_IOS_FRAMEWORK_HASH]
       end
 
       def self.description
@@ -32,6 +32,13 @@ module Fastlane
 
       def self.authors
         ["xiongzenghui"]
+      end
+
+      def self.output
+        [
+          ['ANALYZE_IOS_FRAMEWORK_PATHS', 'all xx.framework file path'],
+          ['ANALYZE_IOS_FRAMEWORK_HASH', 'generate a hash for parse all xx.framework info ']
+        ]
       end
 
       def self.return_value
