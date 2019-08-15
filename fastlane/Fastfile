@@ -1,3 +1,11 @@
 lane :test do
-  analyze_ios_framework
+  pods = '/Users/xiongzenghui/collect_zhihu/osee2unified/osee2unified/Pods'
+  build = '/Users/xiongzenghui/Library/Developer/Xcode/DerivedData/osee2unified-ddwxlveleudpnlgcnxforrauuxfw/Build/Products/Debug-iphonesimulator'
+  app = '/Users/xiongzenghui/Desktop/osee2unifiedRelease.app'
+  
+  analyze_ios_framework(
+    pods: pods,
+    build: build,
+    app: app    
+  )
 end
