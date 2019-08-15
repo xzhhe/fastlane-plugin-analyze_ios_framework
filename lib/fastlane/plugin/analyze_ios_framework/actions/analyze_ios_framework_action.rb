@@ -19,10 +19,10 @@ module Fastlane
 
         frameworks = Fastlane::Helper::AnalyzeIosFrameworkHelper.frameworks(pods, build, app)
         Fastlane::Actions.lane_context[Fastlane::Actions::SharedValues::ANALYZE_IOS_FRAMEWORK_PATHS] = frameworks
-        # pp Fastlane::Actions.lane_context[Fastlane::Actions::SharedValues::ANALYZE_IOS_FRAMEWORK_PATHS]
+        pp Fastlane::Actions.lane_context[Fastlane::Actions::SharedValues::ANALYZE_IOS_FRAMEWORK_PATHS]
 
         Fastlane::Actions.lane_context[Fastlane::Actions::SharedValues::ANALYZE_IOS_FRAMEWORK_PATHS] = Fastlane::Helper::AnalyzeIosFrameworkHelper.generate(frameworks)
-        # pp Fastlane::Actions.lane_context[Fastlane::Actions::SharedValues::ANALYZE_IOS_FRAMEWORK_PATHS]
+        pp Fastlane::Actions.lane_context[Fastlane::Actions::SharedValues::ANALYZE_IOS_FRAMEWORK_PATHS]
       end
 
       def self.description

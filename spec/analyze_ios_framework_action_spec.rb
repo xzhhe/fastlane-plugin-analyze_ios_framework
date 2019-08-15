@@ -31,6 +31,13 @@ describe Fastlane::Actions::AnalyzeIosFrameworkAction do
       pp Fastlane::Helper::AnalyzeIosFrameworkHelper.format_size(Fastlane::Helper::AnalyzeIosFrameworkHelper.file_size(path))
     end
 
+    it 'heler - binary_parse' do
+      path = '/Users/xiongzenghui/Library/Developer/Xcode/DerivedData/osee2unified-ddwxlveleudpnlgcnxforrauuxfw/Build/Products/Debug-iphonesimulator/ZHUDID/ZHUDID.framework'
+      pp Fastlane::Helper::AnalyzeIosFrameworkHelper.binary_parse(path)
 
+      path = '/Users/xiongzenghui/Desktop/osee2unifiedRelease.app/Frameworks/du.framework'
+      pp Fastlane::Helper::AnalyzeIosFrameworkHelper.binary_parse(path)
+    end
+    
   end
 end
