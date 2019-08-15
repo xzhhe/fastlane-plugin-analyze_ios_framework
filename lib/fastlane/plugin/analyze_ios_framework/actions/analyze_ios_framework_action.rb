@@ -21,8 +21,9 @@ module Fastlane
         Fastlane::Actions.lane_context[Fastlane::Actions::SharedValues::ANALYZE_IOS_FRAMEWORK_PATHS] = frameworks
         pp Fastlane::Actions.lane_context[Fastlane::Actions::SharedValues::ANALYZE_IOS_FRAMEWORK_PATHS]
 
-        Fastlane::Actions.lane_context[Fastlane::Actions::SharedValues::ANALYZE_IOS_FRAMEWORK_PATHS] = Fastlane::Helper::AnalyzeIosFrameworkHelper.generate(frameworks)
-        pp Fastlane::Actions.lane_context[Fastlane::Actions::SharedValues::ANALYZE_IOS_FRAMEWORK_PATHS]
+        frameworks_hash = Fastlane::Helper::AnalyzeIosFrameworkHelper.generate(frameworks)
+        Fastlane::Actions.lane_context[Fastlane::Actions::SharedValues::ANALYZE_IOS_FRAMEWORK_HASH] = frameworks_hash
+        pp Fastlane::Actions.lane_context[Fastlane::Actions::SharedValues::ANALYZE_IOS_FRAMEWORK_HASH]
       end
 
       def self.description
