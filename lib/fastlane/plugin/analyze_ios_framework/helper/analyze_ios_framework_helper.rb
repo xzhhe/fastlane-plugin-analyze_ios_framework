@@ -62,7 +62,7 @@ module Fastlane
         files = Dir.glob(File.expand_path('*', framework))
 
         files.each do |file|
-          pp file
+          # pp file
           str = `file #{file}`
           # puts "[type] #{str}"
 
