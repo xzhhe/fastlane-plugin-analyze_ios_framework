@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.author        = 'xiongzenghui'
   spec.email         = 'zxcvb1234001@163.com'
 
-  spec.summary       = 'xx'
+  spec.summary       = 'analysis ios framework in buildout or pods dir'
   spec.homepage      = 'https://github.com/xzhhe/fastlane-plugin-analyze_ios_framework'
   spec.license       = "MIT"
 
